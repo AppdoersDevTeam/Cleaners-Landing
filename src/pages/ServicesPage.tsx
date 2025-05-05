@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -165,7 +164,7 @@ const ServicesPage = () => {
                 <Button asChild variant="secondary" size="lg" className="bg-white text-clean-blue hover:bg-gray-100">
                   <Link to="/booking">Request a Quote</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-blue-700 hover:text-white">
+                <Button asChild variant="outline" size="lg" className="border-white text-clean-blue hover:bg-blue-700 hover:text-white">
                   <Link to="/contact">Contact Us</Link>
                 </Button>
               </div>
