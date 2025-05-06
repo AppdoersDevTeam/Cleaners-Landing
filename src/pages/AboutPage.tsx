@@ -1,6 +1,6 @@
-
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import AppdoersCTA from "@/components/AppdoersCTA";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -210,13 +210,16 @@ const AboutPage = () => {
                 <Button asChild size="lg" className="bg-white text-clean-blue hover:bg-gray-100">
                   <Link to="/booking">Book Now</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-blue-700">
+                <Button asChild variant="outline" size="lg" className="border-white text-clean-blue hover:bg-blue-700 hover:text-white">
                   <Link to="/contact">Contact Us</Link>
                 </Button>
               </div>
             </div>
           </div>
         </section>
+
+        {/* Appdoers CTA */}
+        <AppdoersCTA />
       </main>
       <Footer />
     </>

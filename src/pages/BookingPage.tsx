@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
@@ -14,6 +13,7 @@ import { CalendarIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import AppdoersCTA from "@/components/AppdoersCTA";
 
 const BookingPage = () => {
   const { toast } = useToast();
@@ -469,6 +469,7 @@ const BookingPage = () => {
           </div>
         </section>
       </main>
+      <AppdoersCTA />
       <Footer />
     </>
   );

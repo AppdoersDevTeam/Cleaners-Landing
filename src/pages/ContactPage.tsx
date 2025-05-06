@@ -1,10 +1,10 @@
-
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import AppdoersCTA from "@/components/AppdoersCTA";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 const ContactPage = () => {
@@ -274,6 +274,7 @@ const ContactPage = () => {
           </div>
         </section>
       </main>
+      <AppdoersCTA />
       <Footer />
     </>
   );

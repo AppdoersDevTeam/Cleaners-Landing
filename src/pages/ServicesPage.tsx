@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import AppdoersCTA from "@/components/AppdoersCTA";
 
 const ServicesPage = () => {
   const services = [
@@ -172,6 +173,7 @@ const ServicesPage = () => {
           </div>
         </section>
       </main>
+      <AppdoersCTA />
       <Footer />
     </>
   );
