@@ -1,11 +1,18 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ChevronDown } from 'lucide-react';
+import { useState } from 'react';
 
 const Footer = () => {
+  const [openSection, setOpenSection] = useState<string | null>(null);
+
+  const toggleSection = (section: string) => {
+    setOpenSection(openSection === section ? null : section);
+  };
+
   return (
     <footer className="bg-gray-200 text-gray-600">
       <div className="container-custom py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 gap-8">
           {/* Company info */}
           <div>
             <h2 className="text-xl font-bold mb-4 text-gray-800">Ashburton Cleaners</h2>
@@ -28,8 +35,14 @@ const Footer = () => {
 
           {/* Quick links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-800">Quick Links</h3>
-            <ul className="space-y-2">
+            <button 
+              onClick={() => toggleSection('quickLinks')}
+              className="flex items-center justify-between w-full text-lg font-semibold mb-4 text-gray-800"
+            >
+              Quick Links
+              <ChevronDown className={`h-5 w-5 transition-transform ${openSection === 'quickLinks' ? 'rotate-180' : ''}`} />
+            </button>
+            <ul className={`space-y-2 ${openSection === 'quickLinks' ? 'block' : 'hidden'} md:block`}>
               <li><Link to="/" className="text-gray-600 hover:text-clean-blue transition-colors">Home</Link></li>
               <li><Link to="/services" className="text-gray-600 hover:text-clean-blue transition-colors">Services</Link></li>
               <li><Link to="/about" className="text-gray-600 hover:text-clean-blue transition-colors">About</Link></li>
@@ -40,8 +53,14 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-800">Services</h3>
-            <ul className="space-y-2">
+            <button 
+              onClick={() => toggleSection('services')}
+              className="flex items-center justify-between w-full text-lg font-semibold mb-4 text-gray-800"
+            >
+              Services
+              <ChevronDown className={`h-5 w-5 transition-transform ${openSection === 'services' ? 'rotate-180' : ''}`} />
+            </button>
+            <ul className={`space-y-2 ${openSection === 'services' ? 'block' : 'hidden'} md:block`}>
               <li><Link to="/services" className="text-gray-600 hover:text-clean-blue transition-colors">House Cleaning</Link></li>
               <li><Link to="/services" className="text-gray-600 hover:text-clean-blue transition-colors">Office Cleaning</Link></li>
               <li><Link to="/services" className="text-gray-600 hover:text-clean-blue transition-colors">Deep Cleaning</Link></li>
@@ -52,8 +71,14 @@ const Footer = () => {
 
           {/* Contact info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-800">Contact Us</h3>
-            <ul className="space-y-3">
+            <button 
+              onClick={() => toggleSection('contact')}
+              className="flex items-center justify-between w-full text-lg font-semibold mb-4 text-gray-800"
+            >
+              Contact Us
+              <ChevronDown className={`h-5 w-5 transition-transform ${openSection === 'contact' ? 'rotate-180' : ''}`} />
+            </button>
+            <ul className={`space-y-3 ${openSection === 'contact' ? 'block' : 'hidden'} md:block`}>
               <li className="flex items-start">
                 <Phone className="h-5 w-5 mr-2 text-clean-blue mt-0.5" />
                 <span className="text-gray-600">(03) 123 4567</span>
@@ -75,12 +100,12 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-300 mt-8 pt-6 text-center text-gray-600 text-sm">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col items-center space-y-4">
             <img src="/logo.png" alt="Appdoers Limited Logo" className="h-6 w-auto" />
             <p>&copy; {new Date().getFullYear()} Appdoers Limited. All rights reserved.</p>
-          </div>
-          <div className="mt-2">
-            Website developed by <a href="https://appdoers.co.nz" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-clean-blue transition-colors">appdoers.co.nz</a>
+            <div>
+              Website developed by <a href="https://appdoers.co.nz" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-clean-blue transition-colors">appdoers.co.nz</a>
+            </div>
           </div>
         </div>
       </div>
