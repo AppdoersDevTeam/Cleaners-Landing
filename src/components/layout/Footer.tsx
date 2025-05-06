@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-200 text-gray-600">
       <div className="container-custom py-12">
-        <div className="grid grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company info */}
           <div>
             <h2 className="text-xl font-bold mb-4 text-gray-800">Ashburton Cleaners</h2>
@@ -35,13 +35,16 @@ const Footer = () => {
 
           {/* Quick links */}
           <div>
-            <button 
-              onClick={() => toggleSection('quickLinks')}
-              className="flex items-center justify-between w-full text-lg font-semibold mb-4 text-gray-800"
-            >
-              Quick Links
-              <ChevronDown className={`h-5 w-5 transition-transform ${openSection === 'quickLinks' ? 'rotate-180' : ''}`} />
-            </button>
+            <div className="md:hidden">
+              <button 
+                onClick={() => toggleSection('quickLinks')}
+                className="flex items-center justify-between w-full text-lg font-semibold mb-4 text-gray-800"
+              >
+                Quick Links
+                <ChevronDown className={`h-5 w-5 transition-transform ${openSection === 'quickLinks' ? 'rotate-180' : ''}`} />
+              </button>
+            </div>
+            <h3 className="hidden md:block text-lg font-semibold mb-4 text-gray-800">Quick Links</h3>
             <ul className={`space-y-2 ${openSection === 'quickLinks' ? 'block' : 'hidden'} md:block`}>
               <li><Link to="/" className="text-gray-600 hover:text-clean-blue transition-colors">Home</Link></li>
               <li><Link to="/services" className="text-gray-600 hover:text-clean-blue transition-colors">Services</Link></li>
@@ -53,13 +56,16 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <button 
-              onClick={() => toggleSection('services')}
-              className="flex items-center justify-between w-full text-lg font-semibold mb-4 text-gray-800"
-            >
-              Services
-              <ChevronDown className={`h-5 w-5 transition-transform ${openSection === 'services' ? 'rotate-180' : ''}`} />
-            </button>
+            <div className="md:hidden">
+              <button 
+                onClick={() => toggleSection('services')}
+                className="flex items-center justify-between w-full text-lg font-semibold mb-4 text-gray-800"
+              >
+                Services
+                <ChevronDown className={`h-5 w-5 transition-transform ${openSection === 'services' ? 'rotate-180' : ''}`} />
+              </button>
+            </div>
+            <h3 className="hidden md:block text-lg font-semibold mb-4 text-gray-800">Services</h3>
             <ul className={`space-y-2 ${openSection === 'services' ? 'block' : 'hidden'} md:block`}>
               <li><Link to="/services" className="text-gray-600 hover:text-clean-blue transition-colors">House Cleaning</Link></li>
               <li><Link to="/services" className="text-gray-600 hover:text-clean-blue transition-colors">Office Cleaning</Link></li>
@@ -71,13 +77,16 @@ const Footer = () => {
 
           {/* Contact info */}
           <div>
-            <button 
-              onClick={() => toggleSection('contact')}
-              className="flex items-center justify-between w-full text-lg font-semibold mb-4 text-gray-800"
-            >
-              Contact Us
-              <ChevronDown className={`h-5 w-5 transition-transform ${openSection === 'contact' ? 'rotate-180' : ''}`} />
-            </button>
+            <div className="md:hidden">
+              <button 
+                onClick={() => toggleSection('contact')}
+                className="flex items-center justify-between w-full text-lg font-semibold mb-4 text-gray-800"
+              >
+                Contact Us
+                <ChevronDown className={`h-5 w-5 transition-transform ${openSection === 'contact' ? 'rotate-180' : ''}`} />
+              </button>
+            </div>
+            <h3 className="hidden md:block text-lg font-semibold mb-4 text-gray-800">Contact Us</h3>
             <ul className={`space-y-3 ${openSection === 'contact' ? 'block' : 'hidden'} md:block`}>
               <li className="flex items-start">
                 <Phone className="h-5 w-5 mr-2 text-clean-blue mt-0.5" />
@@ -100,7 +109,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-300 mt-8 pt-6 text-center text-gray-600 text-sm">
-          <div className="flex flex-col items-center space-y-4">
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <img src="/logo.png" alt="Appdoers Limited Logo" className="h-6 w-auto" />
             <p>&copy; {new Date().getFullYear()} Appdoers Limited. All rights reserved.</p>
             <div>
