@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 
 const Testimonials = () => {
@@ -14,7 +13,7 @@ const Testimonials = () => {
       id: 2,
       name: "Mark Williams",
       role: "Business Owner",
-      content: "I didn’t know where to start, but AppDoers guided me every step of the way. Now I have a website I’m proud of.",
+      content: "I didn't know where to start, but AppDoers guided me every step of the way. Now I have a website I'm proud of.",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
     {

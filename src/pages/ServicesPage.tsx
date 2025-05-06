@@ -5,6 +5,21 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AppdoersCTA from "@/components/AppdoersCTA";
 
+const ImageWithWatermark = ({ src, alt, className }: { src: string; alt: string; className?: string }) => {
+  return (
+    <div className="relative">
+      <img src={src} alt={alt} className={className} />
+      <div className="absolute bottom-2 right-2 pointer-events-none">
+        <img 
+          src="/logo.png" 
+          alt="AppDoers Watermark" 
+          className="w-20 opacity-70"
+        />
+      </div>
+    </div>
+  );
+};
+
 const ServicesPage = () => {
   const services = [
     {
@@ -121,7 +136,7 @@ const ServicesPage = () => {
                 >
                   {/* Image */}
                   <div className="md:w-1/2">
-                    <img
+                    <ImageWithWatermark
                       src={service.image}
                       alt={service.title}
                       className="rounded-lg shadow-lg object-cover w-full h-[300px] md:h-[400px]"

@@ -4,13 +4,28 @@ import AppdoersCTA from "@/components/AppdoersCTA";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
+const ImageWithWatermark = ({ src, alt, className }: { src: string; alt: string; className?: string }) => {
+  return (
+    <div className="relative">
+      <img src={src} alt={alt} className={className} />
+      <div className="absolute bottom-2 right-2 pointer-events-none">
+        <img 
+          src="/logo.png" 
+          alt="AppDoers Watermark" 
+          className="w-20 opacity-70"
+        />
+      </div>
+    </div>
+  );
+};
+
 const AboutPage = () => {
   const teamMembers = [
     {
       name: "Sarah Johnson",
       role: "Founder & Manager",
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-      description: "With over 15 years of experience in the cleaning industry, Sarah founded Ashburton Cleaners with a mission to provide exceptional cleaning services with a personal touch.",
+      description: "With over 15 years of experience in the cleaning industry, Sarah founded Appdoers Cleaners with a mission to provide exceptional cleaning services with a personal touch.",
     },
     {
       name: "Michael Chen",
@@ -73,9 +88,9 @@ const AboutPage = () => {
         <section className="bg-clean-light-blue py-16 md:py-24">
           <div className="container-custom">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="heading-primary mb-6">About Ashburton Cleaners</h1>
+              <h1 className="heading-primary mb-6">About Appdoers Cleaners</h1>
               <p className="paragraph mb-8">
-                We're a local cleaning company dedicated to providing exceptional cleaning services to homes and businesses in Ashburton and surrounding areas.
+                We're a local cleaning company dedicated to providing exceptional cleaning services to homes and businesses in New Zealand and surrounding areas.
               </p>
             </div>
           </div>
@@ -86,7 +101,7 @@ const AboutPage = () => {
           <div className="container-custom">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <img
+                <ImageWithWatermark
                   src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
                   alt="Cleaning team"
                   className="rounded-lg shadow-lg object-cover h-[400px] w-full"
@@ -95,13 +110,13 @@ const AboutPage = () => {
               <div className="space-y-6">
                 <h2 className="heading-secondary">Our Story</h2>
                 <p className="paragraph">
-                  Ashburton Cleaners was founded in 2015 with a simple mission: to provide high-quality cleaning services that people can trust. What started as a small, family-owned business has grown into a trusted name in the local community.
+                  Appdoers Cleaners was founded in 2015 with a simple mission: to provide high-quality cleaning services that people can trust. What started as a small, family-owned business has grown into a trusted name in the local community.
                 </p>
                 <p className="paragraph">
                   Our founder, Sarah Johnson, had spent years working in the cleaning industry and saw an opportunity to create a cleaning service that truly cared about its clients and delivered exceptional results every time.
                 </p>
                 <p className="paragraph">
-                  Today, we're proud to serve hundreds of homes and businesses in Ashburton and the surrounding areas, with a team of dedicated cleaning professionals who share our commitment to quality and customer satisfaction.
+                  Today, we're proud to serve hundreds of homes and businesses in New Zealand and the surrounding areas, with a team of dedicated cleaning professionals who share our commitment to quality and customer satisfaction.
                 </p>
               </div>
             </div>
@@ -114,7 +129,7 @@ const AboutPage = () => {
             <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="heading-secondary mb-4">Our Values</h2>
               <p className="paragraph">
-                At Ashburton Cleaners, we're guided by a set of core values that inform everything we do. These principles help us deliver consistent, high-quality service to all our clients.
+                At Appdoers Cleaners, we're guided by a set of core values that inform everything we do. These principles help us deliver consistent, high-quality service to all our clients.
               </p>
             </div>
 
@@ -204,7 +219,7 @@ const AboutPage = () => {
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-6">Ready to Experience Our Service?</h2>
               <p className="text-lg mb-8">
-                Book a cleaning service today and see why Ashburton residents trust us with their homes and businesses.
+                Book a cleaning service today and see why New Zealand residents trust us with their homes and businesses.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button asChild size="lg" className="bg-white text-clean-blue hover:bg-gray-100">

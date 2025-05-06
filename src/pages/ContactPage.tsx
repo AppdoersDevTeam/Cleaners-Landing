@@ -58,19 +58,19 @@ const ContactPage = () => {
     {
       icon: <Mail className="h-5 w-5 text-clean-blue" />,
       title: "Email",
-      details: "info@ashburtoncleaners.com",
+      details: "info@appdoerscleaners.com",
       action: {
         text: "Send email",
-        url: "mailto:info@ashburtoncleaners.com",
+        url: "mailto:info@appdoerscleaners.com",
       },
     },
     {
       icon: <MapPin className="h-5 w-5 text-clean-blue" />,
       title: "Office",
-      details: "123 Main Street, Ashburton, VIC 3147",
+      details: "123 Main Street, New Zealand, VIC 3147",
       action: {
         text: "Get directions",
-        url: "https://maps.google.com/?q=Ashburton+VIC+3147",
+        url: "https://maps.google.com/?q=New Zealand+VIC+3147",
       },
     },
     {
@@ -221,7 +221,7 @@ const ContactPage = () => {
                 {/* Map */}
                 <div className="rounded-lg overflow-hidden shadow-md h-[300px]">
                   <iframe
-                    title="Ashburton Cleaners Location"
+                    title="Appdoers Cleaners Location"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12614.423376326225!2d145.082482!3d-37.8594953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66a73ebede88d%3A0x5045675218cce50!2sAshburton%20VIC%203147%2C%20Australia!5e0!3m2!1sen!2sus!4v1712232644127!5m2!1sen!2sus"
                     width="100%"
                     height="100%"
@@ -249,7 +249,7 @@ const ContactPage = () => {
                   },
                   {
                     question: "What areas do you service?",
-                    answer: "We provide cleaning services in Ashburton and surrounding suburbs within a 15km radius, including Camberwell, Glen Iris, Malvern, and Chadstone.",
+                    answer: "We provide cleaning services in New Zealand and surrounding suburbs within a 15km radius, including Auckland, Christchurch, Wellington, and Dunedin.",
                   },
                   {
                     question: "Do I need to provide cleaning supplies?",

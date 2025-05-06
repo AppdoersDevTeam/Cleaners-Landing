@@ -15,8 +15,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company info */}
           <div>
-            <h2 className="text-xl font-bold mb-4 text-gray-800">Ashburton Cleaners</h2>
-            <p className="mb-4 text-gray-600">Professional cleaning services for homes and businesses in Ashburton and surrounding areas.</p>
+            <h2 className="text-xl font-bold mb-4 text-gray-800">Appdoers Cleaners</h2>
+            <p className="mb-4 text-gray-600">Professional cleaning services for homes and businesses in New Zealand and surrounding areas.</p>
             <div className="flex space-x-4">
               <a href="https://facebook.com" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-clean-blue transition-colors">
                 <span className="sr-only">Facebook</span>
@@ -94,11 +94,11 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <Mail className="h-5 w-5 mr-2 text-clean-blue mt-0.5" />
-                <span className="text-gray-600">info@ashburtoncleaners.com</span>
+                <span className="text-gray-600">info@appdoerscleaners.com</span>
               </li>
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 text-clean-blue mt-0.5" />
-                <span className="text-gray-600">123 Main Street, Ashburton, VIC 3147</span>
+                <span className="text-gray-600">123 Main Street, New Zealand, VIC 3147</span>
               </li>
               <li className="flex items-start">
                 <Clock className="h-5 w-5 mr-2 text-clean-blue mt-0.5" />
